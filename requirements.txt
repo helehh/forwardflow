@@ -1,0 +1,6 @@
+numpy==1.19.2
+altair==4.1.0
+gensim==3.8.0
+pandas==1.1.5
+streamlit==0.73.1
+scikit_learn==0.24.0
