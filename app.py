@@ -6,7 +6,7 @@ from sklearn.decomposition import PCA
 import pandas as pd
 import altair as alt
 
-PATH = "data/50k_skip_150_5_10_5.txt"
+PATH = "data/50k_skip_150_5_10_5.bin"
 
 @st.cache
 def load_forwardflow(allow_output_mutation=True):

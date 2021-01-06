@@ -4,7 +4,7 @@ import numpy as np
 
 class ForwardFlow:
     def __init__(self, embedding):
-        self.embedding = KeyedVectors.load_word2vec_format(embedding, binary=False)
+        self.embedding = KeyedVectors.load_word2vec_format(embedding, binary=True)
         
     def score(self, words):        
         #for each word calculate instantanious forward flow - average semantic distance from all previous words
