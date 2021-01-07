@@ -9,7 +9,7 @@ import altair as alt
 PATH = "data/50k_skip_150_5_10_5.bin"
 
 @st.cache
-def load_forwardflow(allow_output_mutation=True):
+def load_embedding(allow_output_mutation=True):
     return ForwardFlow(PATH)
 
 def main():
@@ -17,7 +17,7 @@ def main():
 
     st.title("Forward flow with word2vec embeddings")
 
-    st.markdown("[Forward flow](http://www.forwardflow.org/) is a metric that measures semantic evoulution of thoughts over time. It can be used to predict creativity.")
+    st.markdown("[Forward flow](http://www.forwardflow.org/) is a metric that measures semantic evolution of thoughts over time. It can be used to predict creativity.")
     
     st.markdown("In order to calculate forward flow of a thought stream the thoughts must be quantified somehow. In this simple demo we will be using [Estonian word2vec](https://datadoi.ee/handle/33/91) word embeddings to quantify thoughts (in contrast to the original paper where [LSA](https://en.wikipedia.org/wiki/Latent_semantic_analysis) was used).")
 
@@ -33,7 +33,7 @@ def main():
     st.markdown("**Try it out yourself:**")
 
     if(session_state.ff == None):
-        ff = load_forwardflow()
+        ff = load_embedding()
         session_state.ff = ff
     else:
         ff = session_state.ff
